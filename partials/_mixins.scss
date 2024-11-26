@@ -1,0 +1,63 @@
+@use "./variables" as *;
+
+// Mixin for tablet (min-width 767px, max-width 1279px)
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+// Mixin for desktop (min-width 1280px and above)
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+// Creating mixins for fonts
+@mixin semi-bold-font {
+  font-family: "TitilliumWeb";
+  font-weight: 600;
+}
+
+@mixin regular-font {
+  font-family: "TitilliumWeb";
+  font-weight: 400;
+}
+
+// paragraph text sizes
+@mixin m-p3-body-small {
+  font-size: .6875rem;
+  line-height: 1rem;
+}
+
+@mixin p3-body-small {
+  font-size: .75rem;
+  line-height: 1.125rem;
+}
+
+
+@mixin m-p1-body-large {
+  font-size: .9375rem;
+  line-height: 1.625rem;
+}
+
+@mixin p1-body-large {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+
+@mixin m-p2-body-medium {
+  font-size: .8125rem;
+  line-height: 1.25rem;
+}
+
+@mixin p2-body-medium {
+  font-size: .875rem;
+  line-height: 1.375rem;
+}
+
+@mixin border-bottom-line {
+  border-bottom: 1px solid $Cloud;
+}
