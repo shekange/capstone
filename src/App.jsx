@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "../pages/HomePage/HomePage.jsx"
-import Header from "../components/Header/Header.jsx"
+import HomePage from "./pages/HomePage/HomePage.jsx"
+import Header from "./components/Header/Header.jsx"
 
 function App() {;
 
@@ -10,9 +10,8 @@ function App() {;
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
-          <Footer />
         </BrowserRouter>
       </div>
     </>
