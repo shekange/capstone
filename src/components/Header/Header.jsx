@@ -9,7 +9,7 @@ function Header() {;
     <header>
       <div className="header">
           <div>
-            <NavLink to="/upload">Image Decoration</NavLink>
+            <Link to="/upload">Image Decoration</Link>
           </div>
       </div>
     </header>
