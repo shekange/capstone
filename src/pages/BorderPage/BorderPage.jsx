@@ -18,7 +18,7 @@ const BorderPage = () => {
     }
 
     const formData = new FormData();
-    formData.append("borderType", borderType);
+    // formData.append("borderType", borderType);
     formData.append("image", image);
 
     try {
@@ -68,7 +68,7 @@ const BorderPage = () => {
       <div className="global__border-selection">
         <p className="global__title">Select Border Type:</p>
 
-        <div className="border-images">
+        {/* <div className="border-images">
           <img
             src="/src/assets/images/border-horizontal.png"
             alt="Horizontal Border"
@@ -81,7 +81,7 @@ const BorderPage = () => {
             className={`border-image ${borderType === "vertical" ? "selected" : ""}`}
             onClick={() => handleBorderSelection("vertical")}
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Submit button */}
