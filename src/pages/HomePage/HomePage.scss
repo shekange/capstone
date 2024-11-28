@@ -1,14 +1,2 @@
 @use "/styles/variables" as *;
 @use "/styles/mixins" as *;
-
-.homepage {
-    &__title {
-        display: flex;
-        justify-content: center;
-    }
-
-    &__countdown {
-        display: flex;
-        justify-content: center;
-    }
-}

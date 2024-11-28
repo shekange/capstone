@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./HomePage.scss";
 
 export default function HomePage() {
@@ -22,8 +23,12 @@ export default function HomePage() {
         const days = Math.floor(
           (difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
         );
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         setTimeLeft({ months, days, hours, minutes, seconds });
@@ -41,13 +46,24 @@ export default function HomePage() {
   }, [targetDate]);
 
   return (
-    <main className="homepage">
-      <div className="homepage__title">WE'RE GETTING MARRIED</div>
-      <div className="homepage__countdown">
-        <div>
-          {timeLeft.months} months, {timeLeft.days} days, {timeLeft.hours} hours, {timeLeft.minutes} minutes, {timeLeft.seconds} seconds
+    <main className="global">
+      <div className="global__title">WE'RE GETTING MARRIED</div>
+      <div className="global__countdown">
+        <div className="global__tablet-desktop-countdown">
+          {timeLeft.months} MONTHS, {timeLeft.days} DAYS, {timeLeft.hours}{" "}
+          HOURS, {timeLeft.minutes} MINUTES, {timeLeft.seconds} SECONDS
+        </div>
+        <div className="global__mobile-countdown">
+          <p>{timeLeft.months} MONTHS</p>
+          <p>{timeLeft.days} DAYS</p>
+          <p>{timeLeft.hours} HOURS</p>
+          <p>{timeLeft.minutes} MINUTES</p>
+          <p>{timeLeft.seconds} SECONDS</p>
         </div>
       </div>
+      <Link to="/border" className="global__button">
+        IMAGE DECORATION
+      </Link>
     </main>
   );
 }
