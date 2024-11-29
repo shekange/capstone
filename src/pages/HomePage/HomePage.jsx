@@ -50,19 +50,19 @@ export default function HomePage() {
       <div className="global__title">WE'RE GETTING MARRIED</div>
       <div className="global__countdown">
         <div className="global__tablet-desktop-countdown">
-          {timeLeft.months} MONTHS, {timeLeft.days} DAYS, {timeLeft.hours}{" "}
-          HOURS, {timeLeft.minutes} MINUTES, {timeLeft.seconds} SECONDS
+          {timeLeft.months} Months, {timeLeft.days} Days, {timeLeft.hours}{" "}
+          Hours, {timeLeft.minutes} Minutes, {timeLeft.seconds} Seconds
         </div>
         <div className="global__mobile-countdown">
-          <p>{timeLeft.months} MONTHS</p>
-          <p>{timeLeft.days} DAYS</p>
-          <p>{timeLeft.hours} HOURS</p>
-          <p>{timeLeft.minutes} MINUTES</p>
-          <p>{timeLeft.seconds} SECONDS</p>
+          <p>{timeLeft.months} Months</p>
+          <p>{timeLeft.days} Days</p>
+          <p>{timeLeft.hours} Hours</p>
+          <p>{timeLeft.minutes} Minutes</p>
+          <p>{timeLeft.seconds} Seconds</p>
         </div>
       </div>
       <Link to="/border" className="global__button">
-        IMAGE DECORATION
+        Image Decoration
       </Link>
     </main>
   );

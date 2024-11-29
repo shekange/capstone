@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import "./BorderPage.scss";
 
 const BorderPage = () => {
   const [image, setImage] = useState(null);
-  const [borderType, setBorderType] = useState("horizontal");
   const [imageUrl, setImageUrl] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -18,7 +19,6 @@ const BorderPage = () => {
     }
 
     const formData = new FormData();
-    // formData.append("borderType", borderType);
     formData.append("image", image);
 
     try {
@@ -32,7 +32,6 @@ const BorderPage = () => {
         }
       );
 
-      // Check if response contains the image URL
       if (response && response.data && response.data.imageUrl) {
         setImageUrl(response.data.imageUrl);
         setErrorMessage("");
@@ -40,7 +39,6 @@ const BorderPage = () => {
         setErrorMessage("Failed to process the image.");
       }
     } catch (error) {
-      // Handle errors from the API request
       if (error.response) {
         setErrorMessage(
           "Error processing the image: " + error.response.data.error
@@ -52,49 +50,36 @@ const BorderPage = () => {
     }
   };
 
-  // Handle border type selection
-  const handleBorderSelection = (type) => {
-    setBorderType(type);
-  };
-
   return (
     <div className="global">
-      <div className="global__title">Upload an Image with Border</div>
+      <div className="global__title">Upload an Image</div>
 
       {/* File input for image upload */}
       <input type="file" onChange={handleImageChange} />
 
-      {/* Border type selection with visual representation */}
-      <div className="global__border-selection">
-        <p className="global__title">Select Border Type:</p>
-
-        {/* <div className="border-images">
-          <img
-            src="/src/assets/images/border-horizontal.png"
-            alt="Horizontal Border"
-            className={`border-image ${borderType === "horizontal" ? "selected" : ""}`}
-            onClick={() => handleBorderSelection("horizontal")}
-          />
-          <img
-            src="/src/assets/images/border-vertical.png"
-            alt="Vertical Border"
-            className={`border-image ${borderType === "vertical" ? "selected" : ""}`}
-            onClick={() => handleBorderSelection("vertical")}
-          />
-        </div> */}
-      </div>
-
       {/* Submit button */}
-      <button className="global__button" onClick={handleNextStep}>Upload Image</button>
+      <button className="global__button" onClick={handleNextStep}>
+        Upload Image
+      </button>
 
       {/* Error message display */}
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
 
       {/* Display the uploaded image */}
       {imageUrl && (
-        <div>
+        <div className="processed-image-section">
           <div className="global__title">Processed Image:</div>
-          <img src={imageUrl} alt="Processed border" width="300" />
+          <img
+            src={`http://localhost:8080${imageUrl}`}
+            alt="Processed border"
+            width="300"
+          />
+          {/* Add a link button */}
+          <div>
+            <Link to="/" className="global__button">
+              Back to Main Page
+            </Link>
+          </div>
         </div>
       )}
     </div>
