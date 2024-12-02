@@ -4,7 +4,7 @@ Wedding Photo Booth Website
 
 ## Overview
 
-A user-friendly wedding photo booth website that allows guests to upload the photos they take at the wedding, apply pre-designed wedding-themed floral borders, and download the customized images. All uploaded images will be stored in a database for easy access and sharing.
+A user-friendly wedding photo booth website that allows guests to upload the photos they take at the wedding, apply pre-designed wedding-themed floral border, and download the customized images. All uploaded images will be stored in a database for easy access and sharing.
 
 ### Problem Space
 
@@ -20,13 +20,13 @@ At weddings, guests often capture candid and memorable moments on their own devi
 ##### Special Considerations:
 
 - The website needs to be intuitive and easy to navigate for users of all ages and technical skill levels.
-- It should handle multiple simultaneous uploads without performance issues.
+- It should handle uploads without performance issues.
 - Images should be stored securely in a database for later access.
 
 ### Features
 
 1. **Photo Upload:** Guests can upload their photos from their devices.
-2. **Floral Borders:** Offer a selection of wedding-themed floral borders to apply to the uploaded photos.
+2. **Floral Borders:** Offer a wedding-themed floral border to apply to the uploaded photos.
 3. **Photo Storage:** Store all uploaded and customized photos in a centralized database for future access.
 4. **Responsive Design:** Ensure the website is accessible on mobile, tablet, and desktop devices.
 
@@ -36,7 +36,7 @@ At weddings, guests often capture candid and memorable moments on their own devi
 
 - **Frontend:** HTML, CSS (SCSS), JavaScript (React for interactivity).
 - **Backend:** Node.js with Express for handling uploads and processing images.
-- **Database:** MySQL for storing uploaded photos and metadata.
+- **Database:** Storing uploaded photos and metadata.
 - **Image Processing:** Sharp or a similar library for applying floral borders to photos.
 
 ### APIs
@@ -47,20 +47,13 @@ At weddings, guests often capture candid and memorable moments on their own devi
 ### Sitemap
 
 1. **Home Page:** Welcome message, event details, and a call-to-action to upload photos.
-2. **Photo Upload Page:** Simple drag-and-drop or file selector for uploading photos.
-3. **Edit Page:** Display the uploaded photo with options to preview and apply floral borders.
-4. **Confirmation Page:** Allow users to download their customized photos or return back to the main page.
-
-### Mockups
-
-![Capstone proposal1](https://github.com/user-attachments/assets/b302f450-0883-4db7-ab52-7f9ad9663a7a)
-![Capstone proposal 2](https://github.com/user-attachments/assets/4787e332-2377-46b8-b31d-fa3f2bb92e11)
+2. **Upload Page:** Upload button for users to upload the image. Once they hit the button, the processed image will be returned at the bottom. Additionally, there will be a back to main page button to guide the users back to the homepage.
 
 ### Data
 
 ##### Relationships:
 
-- **Photo Data:** Original photo, processed photo with the border, and metadata (e.g., upload time, user name).
+- **Photo Data:** Original photo and processed photo with the border.
 - **Border Data:** Pre-defined options for floral borders.
 
 ##### Data Model Example:
@@ -69,36 +62,10 @@ At weddings, guests often capture candid and memorable moments on their own devi
   - `id`: Unique identifier for the photo.
   - `originalPhotoPath`: Path to the uploaded photo.
   - `processedPhotoPath`: Path to the photo with the floral border.
-  - `timestamp`: Date and time of the upload.
 
 ### Endpoints
 
-- **POST /upload:** Upload a photo to the server.
 - **POST /process:** Apply a floral border to the uploaded photo.
-- **GET /download/:id:** Retrieve the processed photo for download.
-- **GET /photos:** (Optional for admin) Retrieve all uploaded photos.
-
-## Roadmap
-
-##### Day 1:
-- Set up the project structure and basic website layout.
-- Implement the photo upload feature.
-
-##### Day 2:
-- Add image processing functionality to apply floral borders.
-- Set up the database for storing uploaded photos and metadata.
-
-##### Day 3:
-- Design and refine the UI for a seamless user experience.
-
-##### Day 4:
-- Implement responsive design for mobile and desktop devices.
-
-##### Day 5:
-- Test for bugs and optimize website performance.
-
-##### Day 6:
-- Deploy the website to a hosting platform.
 
 ---
 
