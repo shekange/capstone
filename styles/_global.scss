@@ -75,7 +75,7 @@ body {
     color: $Main-Brown;
     background-color: $Main-Pink;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -93,8 +93,8 @@ body {
     font-size: 1rem;
     margin: 1rem;
     padding: 0.25rem;
-    border: 1px solid $Main-Pink;
-    border-radius: 5px;
+    border: 0.0625rem solid $Main-Pink;
+    border-radius: 0.3rem;
     outline: none;
 
     @include tablet {
@@ -110,7 +110,7 @@ body {
   select {
     width: auto;
     padding: 0.4rem;
-    background-color: #f9f9f9;
+    background-color: $Main-Pink;
   }
 
   .global__image-preview {

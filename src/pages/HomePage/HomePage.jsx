@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./HomePage.scss";
 
 export default function HomePage() {
   const [timeLeft, setTimeLeft] = useState({
