@@ -1,0 +1,36 @@
+@use "/styles/variables" as *;
+@use "/styles/mixins" as *;
+
+.qa {
+    margin: 0 auto;
+    width: 15rem;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 2rem;
+
+    @include tablet {
+        width: 30rem;
+    }
+
+    @include desktop {
+        width: 40rem
+    }
+}
+
+.qa__question {
+    font-size: 1.2rem;
+    margin-bottom: 1rem; 
+    font-weight: bold;
+    @include desktop {
+        font-size: 1.5rem;
+    }
+}
+
+.qa__answer {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+
+    @include desktop {
+        font-size: 1.2rem;
+    }
+}

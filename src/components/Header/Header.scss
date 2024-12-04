@@ -56,13 +56,13 @@
   &__countdown {
     font-size: 1rem;
     font-weight: bold;
-    color: $Third-Pink;
+    color: $Secondary-Pink;
 
     @include desktop {
       font-size: 1.5rem;
     }
   }
-  
+
   &__tablet-desktop-countdown {
     display: none;
 
@@ -83,7 +83,11 @@
 
   &__nav {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-top: 0.0625rem solid $Main-Brown;
+    border-bottom: 0.0625rem solid $Main-Brown;
 
     &-list {
       list-style: none;
@@ -116,8 +120,8 @@
         }
 
         &.active {
-          color: $Secondary-Pink; 
-          border-bottom: 0.0625rem solid $Secondary-Pink;
+          color: $Secondary-Pink;
+          font-weight: 700;
         }
       }
     }
