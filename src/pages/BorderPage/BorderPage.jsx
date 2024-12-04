@@ -57,9 +57,11 @@ const BorderPage = () => {
       <input type="file" onChange={handleImageChange} />
 
       {/* Submit button */}
-      <button className="borderpage__button" onClick={handleNextStep}>
-        Upload Image
-      </button>
+      <div>
+        <button className="borderpage__button" onClick={handleNextStep}>
+          Upload Image
+        </button>
+      </div>
 
       {/* Error message display */}
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}

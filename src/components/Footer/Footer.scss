@@ -2,34 +2,33 @@
 @use "/styles/mixins" as *;
 
 .footer {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+
+  @include desktop {
+    margin: 5rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    border-bottom: 0.0625rem solid $Main-Brown;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @include desktop {
-        margin: 5rem;
+      font-size: 4rem;
     }
-  
-    &__title {
-        font-size: 2rem; 
-        border-bottom: 0.0625rem solid $Main-Brown;
-        padding-bottom: 0.5rem; 
-        padding-left: 1rem;
-        padding-right: 1rem;
+  }
 
-        @include desktop {
-            font-size: 4rem;
-        }
-        
+  &__date {
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    @include desktop {
+      font-size: 2rem;
     }
-
-    &__date {
-        font-size: 1rem;
-        margin-top: 1rem;  
-
-        @include desktop {
-            font-size: 2rem;
-        }
-    }
+  }
 }

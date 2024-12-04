@@ -48,9 +48,15 @@
     border-radius: 0.3rem;
     outline: none;
     width: 100%;
+    width: 15rem;
 
     @include tablet {
       padding: 0.5rem;
+      width: 20rem;
+    }
+
+    @include desktop {
+      width: 25rem;
     }
 
     &:focus {
