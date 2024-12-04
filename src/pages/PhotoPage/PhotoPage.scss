@@ -5,13 +5,8 @@
   margin: 1rem;
   text-align: center;
 
-  &__title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-
-    @include desktop {
-      font-size: 3rem;
-    }
+  @include desktop {
+    margin: 3rem;
   }
 
   &__container {

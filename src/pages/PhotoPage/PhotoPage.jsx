@@ -18,7 +18,6 @@ const PhotosPage = () => {
 
   return (
     <div className="photos-page">
-      <div className="photos-page__title">Processed Photos</div>
       <div className="photos-page__container">
         {images.length === 0 ? (
           <p>No images available</p>

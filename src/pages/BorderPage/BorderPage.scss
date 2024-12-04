@@ -36,6 +36,12 @@
       background-color: $Secondary-Pink;
       color: $white;
     }
+
+    &__image {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center;
+    }
   }
 
   input[type="file"],

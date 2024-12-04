@@ -70,11 +70,13 @@ const BorderPage = () => {
       {imageUrl && (
         <div className="processed-image-section">
           <div className="borderpage__title">Processed Image:</div>
+          <div className="borderpage__image"> 
           <img
             src={`http://localhost:8080${imageUrl}`}
             alt="Processed border"
             width="300"
           />
+          </div>
         </div>
       )}
     </div>
