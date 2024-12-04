@@ -5,6 +5,7 @@ import BorderPage from "./pages/BorderPage/BorderPage.jsx";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import QA from "./pages/QAPage/QA.jsx";
+import PhotoPage from "./pages/PhotoPage/PhotoPage.jsx";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/decorate" element={<BorderPage />} />
             <Route path="/q-a" element={<QA />} />
+            <Route path="/photos" element={<PhotoPage />} />
           </Routes>
           <Footer />
         </BrowserRouter>
