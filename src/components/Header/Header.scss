@@ -1,0 +1,125 @@
+@use "/styles/variables" as *;
+@use "/styles/mixins" as *;
+
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $Main-Brown;
+  background-image: url("/src/assets/images/mobile-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  @include tablet {
+    background-image: url("/src/assets/images/tablet-header.png");
+  }
+
+  &__couple-name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    @include desktop {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__date {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 8rem;
+
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__countdown {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $Third-Pink;
+
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__tablet-desktop-countdown {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__mobile-countdown {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__nav {
+    text-align: center;
+    margin-top: 1rem;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      font-size: 1rem;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      @include desktop {
+        font-size: 1.6rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $Main-Brown;
+        transition: color 0.3s ease;
+        padding-bottom: 0.05rem;
+
+        &:hover {
+          color: $Third-Pink;
+        }
+
+        &.active {
+          color: $Secondary-Pink; 
+          border-bottom: 0.0625rem solid $Secondary-Pink;
+        }
+      }
+    }
+  }
+}

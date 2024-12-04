@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import "./BorderPage.scss";
 
@@ -51,14 +50,14 @@ const BorderPage = () => {
   };
 
   return (
-    <div className="global">
-      <div className="global__title">Upload an Image</div>
+    <div className="borderpage">
+      <div className="borderpage__title">Upload an Image</div>
 
       {/* File input for image upload */}
       <input type="file" onChange={handleImageChange} />
 
       {/* Submit button */}
-      <button className="global__button" onClick={handleNextStep}>
+      <button className="borderpage__button" onClick={handleNextStep}>
         Upload Image
       </button>
 
@@ -68,18 +67,12 @@ const BorderPage = () => {
       {/* Display the uploaded image */}
       {imageUrl && (
         <div className="processed-image-section">
-          <div className="global__title">Processed Image:</div>
+          <div className="borderpage__title">Processed Image:</div>
           <img
             src={`http://localhost:8080${imageUrl}`}
             alt="Processed border"
             width="300"
           />
-          {/* Add a link button */}
-          <div>
-            <Link to="/" className="global__button">
-              Back to Main Page
-            </Link>
-          </div>
         </div>
       )}
     </div>

@@ -1,0 +1,13 @@
+@use "/styles/variables" as *;
+@use "/styles/mixins" as *;
+
+.homepage {
+    &__image {
+        margin-top: 1rem;
+
+        @include tablet {
+            margin-top: 2rem;
+        }
+        
+    }
+}
