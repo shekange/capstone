@@ -5,7 +5,7 @@
   margin: 0 auto;
   width: 15rem;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Amaranth";
   margin-top: 2rem;
   padding-bottom: 1rem;
 
@@ -22,6 +22,7 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  text-transform: uppercase;
   @include desktop {
     font-size: 1.5rem;
   }
