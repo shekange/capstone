@@ -2,12 +2,9 @@
 @use "/styles/mixins" as *;
 
 .homepage {
-    &__image {
-        margin-top: 1rem;
-
-        @include tablet {
-            margin-top: 2rem;
-        }
-        
-    }
+  display: flex;
+  &__image {
+    max-width: 40%;
+    margin: 0 auto;
+  }
 }
